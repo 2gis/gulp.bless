@@ -1,6 +1,6 @@
 {
   "name": "gulp.bless",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Gulp plugin for CSS Post-Processor Bless",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "bless4": "*"
   },
   "devDependencies": {
-    "bless4": "~4.0.2",
+    "bless4": "~4.10.1",
     "mocha": "~1.20.1",
     "vinyl": "~0.2.3",
     "css": "~2.0.0"

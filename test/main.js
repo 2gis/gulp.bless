@@ -39,7 +39,7 @@ describe("gulp.bless", function() {
                     assert(fs.existsSync(expected), "Out file " + basename + " must exists.");
 
                     var expectedData = fs.readFileSync(expected).toString();
-                    assert.equal(normalizeCss(expectedData), normalizeCss(file.contents.toString()), "Blessed css for " + basename + " must be valid");
+                    assert(normalizeCss(expectedData) == normalizeCss(file.contents.toString()), "Blessed css for " + basename + " must be valid");
                     cb();
                 }))
                 .on('finish', function() {

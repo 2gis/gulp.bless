@@ -13,7 +13,7 @@ function blessify() {
         if (file.isNull()) return cb(null, file);
         if (file.isStream()) return cb(new gutil.PluginError(PLUGIN_NAME, "Streaming not supported"));
 
-        var result = bless(file.contents.toString());
+        var result = bless(file.contents.toString(), 4079); // need to have enough for @import statements
         var stream = this;
 
         var names = result.data.map(function(conents, i) {
