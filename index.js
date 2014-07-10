@@ -16,24 +16,22 @@ function blessify() {
         var result = bless(file.contents.toString(), 4079); // need to have enough for @import statements
         var stream = this;
 
-        var names = result.data.map(function(conents, i) {
-            if (i == 0) {
-                return file.path;
-            } else {
+        var names = [file.path];
+
+        if (result.data.length > 1) {
+            names = names.concat(result.data.map(function(conents, i) {
                 var ext = path.extname(file.path);
                 var basename = path.basename(file.path, ext);
                 var dirname = path.dirname(file.path);
 
                 return path.join(dirname, basename + '-blessed' + i + ext);
-            }
-        });
+            }));
 
-        if (names.length > 1) {
             var imports = names.slice(1).map(function(name) {
                 var basename = path.basename(name);
                 return '@import "' + basename + '";';
             });
-            result.data[0] = result.data[0] + '\n' + imports.join('\n');
+            result.data.unshift(imports.join('\n') + '\n');
         }
 
         result.data.forEach(function(contents, i) {
