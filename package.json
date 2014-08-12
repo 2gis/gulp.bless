@@ -1,6 +1,6 @@
 {
   "name": "gulp.bless",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Gulp plugin for CSS Post-Processor Bless",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/anru/gulp.bless.git"
+    "url": "git://github.com/2gis/gulp.bless.git"
   },
   "keywords": [
     "gulpplugin",
@@ -17,11 +17,11 @@
     "gulpfriendly"
   ],
   "author": "Andrey Rublev",
-  "license": "MIT",
+  "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/anru/gulp.bless/issues"
+    "url": "https://github.com/2gis/gulp.bless/issues"
   },
-  "homepage": "https://github.com/anru/gulp.bless",
+  "homepage": "https://github.com/2gis/gulp.bless",
   "dependencies": {
     "through2": "~0.5.1",
     "gulp-util": "~2.2.17"
